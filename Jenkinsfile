@@ -11,6 +11,11 @@ stages {
       sh "ansible-playbook s3-bucket.yml"
         }
      }
+
+  stage ('Execute Ansible Playbook'){
+    steps {
+      sh "ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 's3-bucket.yml'"
+     }
   
   stage ('terraform init'){
     steps {
