@@ -9,5 +9,5 @@
     
     - name: Create S3 bucket
       s3_bucket:
-        name: javahome-tf-1212
+        name: my-test-arijit-bucket
         state: present
