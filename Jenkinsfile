@@ -8,7 +8,7 @@ stages {
 
   stage ('Execute Ansible Playbook'){
     steps {
-      sh "ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 's3-bucket.yml'"
+      ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 's3-bucket.yml'
        }
      }
    
